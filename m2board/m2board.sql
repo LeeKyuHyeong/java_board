@@ -56,4 +56,13 @@ ALTER TABLE tbl_board
 ;
 
 --SELECT * FROM tbl_board;
+SELECT * FROM tbl_member;
+
+INSERT INTO tbl_member(id, name, password, birth)
+values('abc', '에이비', '1234', '2000-01-01');
+
+SELECT count(*) as cnt FROM TBL_MEMBER
+where id = 'abc';
+
+DELETE FROM tbl_member WHERE id = 'abc';
 

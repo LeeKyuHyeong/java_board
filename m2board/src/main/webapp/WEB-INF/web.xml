@@ -4,9 +4,30 @@
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.jsp</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
-    <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  
+  <!-- 디스패처서블릿 톰캣이자체적으로만든다 req res도 지가 만든다-->
+  <servlet>
+  	<servlet-name>dispatcher</servlet-name>
+  	<servlet-class>board.controller.DispatcherServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>dispatcher</servlet-name>
+  	<url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 필터 설정 -->
+  <filter>
+  	<filter-name>set character encoding</filter-name>
+  	<filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+  	<init-param>
+  		<param-name>encoding</param-name>
+  		<param-value>UTF-8</param-value>
+  	</init-param>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>set character encoding</filter-name>
+  	<url-pattern>/*</url-pattern>  	
+  </filter-mapping>
 </web-app>

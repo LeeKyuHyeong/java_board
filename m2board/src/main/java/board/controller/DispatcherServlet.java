@@ -61,7 +61,7 @@ public class DispatcherServlet extends HttpServlet {
 
 		String requestURI = request.getRequestURI();
 		String action = requestURI.substring(request.getContextPath().length());
-		System.out.println("requestURI : " + requestURI);
+		//System.out.println("requestURI : " + requestURI);
 		System.out.println("action : " + action);
 		
 		AbstractController controller = null;

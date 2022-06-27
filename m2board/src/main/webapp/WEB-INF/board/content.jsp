@@ -6,6 +6,15 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="css/board.css" type="text/css">
+<script type="text/javascript">
+function confirm_delete() {
+	if(confirm('정말 삭제하시겠습니까?')){
+		location.href = "BoardDeleteAction.do?no=${boardDto.no }";
+	} else {
+		return;
+	}
+}
+</script>
 </head>
 <body>
 <table width="700">
@@ -38,7 +47,7 @@
 <a href="BoardList.do">[목록]</a>
 <c:if test="${boardDto.memberDto.id == sessionScope.userInfo.id }">
 	<a href="BoardUpdate.do?no=${boardDto.no }">[수정]</a>
-	<a href="BoardDeleteAction.do?no=${boardDto.no }">[삭제]</a>
+	<a href="javascript:onclick=(confirm_delete)" >[삭제]</a>
 </c:if>
 </body>
 </html>

@@ -31,7 +31,7 @@
 	</table>
 </form> --%>
 <script type="text/javascript">
-	confirm('')
+	
 </script>
 </body>
 </html>

@@ -1,4 +1,6 @@
 @CHARSET "UTF-8";
+
+a {text-decoration: none; color: green;}
 table {border-collapse: collapse;}
 table caption {font-family: 나눔고딕코딩; font-size: 1.3em;padding-bottom: 5px}
 table th, table td {font-family: monospace; padding: 10px; border: solid 1px gray; }

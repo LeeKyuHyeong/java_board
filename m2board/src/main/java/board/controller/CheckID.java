@@ -11,8 +11,6 @@ public class CheckID extends AbstractController{
 	public ModelAndView handleRequestInternal(HttpServletRequest request, HttpServletResponse response) {
 		String id = request.getParameter("user_id");
 		
-		//System.out.println("id : " + id);
-		
 		MemberDao memberDao = MemberDao.getInstance();
 		
 		int cnt = memberDao.checkID(id);	

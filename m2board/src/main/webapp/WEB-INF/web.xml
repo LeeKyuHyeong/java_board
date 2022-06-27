@@ -7,14 +7,14 @@
   </welcome-file-list>
   
   <!-- 디스패처서블릿 톰캣이자체적으로만든다 req res도 지가 만든다-->
-  <servlet>
+  <!-- <servlet>
   	<servlet-name>dispatcher</servlet-name>
   	<servlet-class>board.controller.DispatcherServlet</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>dispatcher</servlet-name>
   	<url-pattern>*.do</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
   
   <!-- 필터 설정 -->
   <filter>

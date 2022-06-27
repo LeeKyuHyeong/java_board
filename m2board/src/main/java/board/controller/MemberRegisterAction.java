@@ -21,7 +21,6 @@ public class MemberRegisterAction extends AbstractController{
 		memberDto.setAddress1(request.getParameter("address1"));
 		memberDto.setAddress2(request.getParameter("address2"));
 		
-		System.out.println(memberDto);
 		MemberDao memberDao = MemberDao.getInstance();
 				
 		if(memberDao.registerMember(memberDto)) {	//회원 등록 성공

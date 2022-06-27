@@ -8,10 +8,12 @@ import java.util.Properties;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+@WebServlet("*.do")
 public class DispatcherServlet extends HttpServlet {
 	
 	// 클래스 파일이 변경되면 자동 리로딩한다 톰캣이
@@ -61,7 +63,6 @@ public class DispatcherServlet extends HttpServlet {
 
 		String requestURI = request.getRequestURI();
 		String action = requestURI.substring(request.getContextPath().length());
-		//System.out.println("requestURI : " + requestURI);
 		System.out.println("action : " + action);
 		
 		AbstractController controller = null;

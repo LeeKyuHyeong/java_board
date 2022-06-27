@@ -55,14 +55,28 @@ ALTER TABLE tbl_board
 	REFERENCES tbl_member (id)
 ;
 
---SELECT * FROM tbl_board;
+SELECT * FROM tbl_board;
 SELECT * FROM tbl_member;
 
-INSERT INTO tbl_member(id, name, password, birth)
-values('abc', '에이비', '1234', '2000-01-01');
+SELECT b.no, b.title, b.id, b.regdate, b.readcount, m.name
+FROM tbl_board b join tbl_member m
+ON b.id = m.id
+ORDER BY no DESC;
 
-SELECT count(*) as cnt FROM TBL_MEMBER
-where id = 'abc';
+DELETE FROM TBL_BOARD WHERE no = 2;
 
-DELETE FROM tbl_member WHERE id = 'abc';
+SELECT rownum, title FROM tbl_board;
+
+-- 페이징 처리
+SELECT B.*
+        FROM (SELECT rownum AS rnum, A.*
+              FROM (SELECT b.no, b.title, m.id, 
+                           case when to_char(b.regdate, 'YYYY-MM-DD') = to_char(sysdate, 'YYYY-MM-DD') 
+                                then to_char(b.regdate, 'HH24:MI:SS')  
+                                else to_char(b.regdate, 'YYYY-MM-DD') end AS regdate, b.readcount, m.name 
+                    FROM tbl_board b join tbl_member m
+                    ON b.id = m.id  	
+                    ORDER BY no DESC) A) B
+        WHERE 11<=rnum AND rnum<=20;
+        
 

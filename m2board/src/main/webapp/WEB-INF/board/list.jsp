@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="css/board.css" type="text/css">
 </head>
 <body>
-${logInfo }<a href="Logout.do">로그아웃</a>
+${logInfo }<a href="Logout.do">[로그아웃]</a>
 <table width="600">
 	<caption>게시판 리스트</caption>
 	<tr>

@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +19,7 @@ function goUserRegist(){  //회원가입
 <tr>
 	<th>ID</th>
 	<td>
-		<input type="text" name="id" autofocus="autofocus" required="required" />
+		<input type="text" name="id" autofocus="autofocus" required="required" value="${id }" />
 	</td>
 </tr>
 <tr>
@@ -30,7 +30,11 @@ function goUserRegist(){  //회원가입
 </tr>
 <tr>
 	<td colspan="2">
-		<input type="checkbox" name="setid" value="1" />id 저장
+		<input type="checkbox" name="setid" value="1"
+			<c:if test="${id != ''}">
+			checked
+			</c:if>
+		 />id 저장
 	</td>
 </tr>
 <tr>

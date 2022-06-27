@@ -19,17 +19,6 @@
 			<td><input type="text" name="title" required value="${boardDto.title }" /></td>
 		</tr>
 		<tr>
-			<th>이름</th>
-			<td><input type="text" name="name" value="${boardDto.name }" required/></td>
-		</tr>
-		<tr>
-			<th>비밀번호</th>
-			<td>
-				<input type="password" name="password" placeholder="비밀번호" required/> <br>
-				*처음 글 작성시 입력한 비밀번호를 입력해주세요
-			</td>
-		</tr>
-		<tr>
 			<th>내용</th>
 			<td>
 				<textarea required rows="5" cols="50" name="content" placeholder="내용" required>${boardDto.content }

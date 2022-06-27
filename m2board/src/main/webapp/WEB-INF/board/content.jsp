@@ -19,15 +19,15 @@
 	</tr>
 	<tr>
 		<th>이름</th>
-		<th>${boardDto.name }</th>
+		<th>${boardDto.memberDto.name }</th>
 	</tr>
 	<tr>
 		<th>조회수</th>
-		<th>${boardDto.readcount }</th>
+		<th>${boardDto.readcnt }</th>
 	</tr>
 	<tr>
 		<th>작성시간</th>
-		<th>${boardDto.writeday }</th>
+		<th>${boardDto.regdt }</th>
 	</tr>
 	<tr>
 		<th>내용</th>

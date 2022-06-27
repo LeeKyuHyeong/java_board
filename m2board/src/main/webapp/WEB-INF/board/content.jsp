@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,7 +36,9 @@
 	</tr>
 </table> <br>
 <a href="BoardList.do">[목록]</a>
-<a href="BoardUpdate.do?no=${boardDto.no }">[수정]</a>
-<a href="BoardDelete.do?no=${boardDto.no }">[삭제]</a>
+<c:if test="${boardDto.memberDto.id == sessionScope.userInfo.id }">
+	<a href="BoardUpdate.do?no=${boardDto.no }">[수정]</a>
+	<a href="BoardDeleteAction.do?no=${boardDto.no }">[삭제]</a>
+</c:if>
 </body>
 </html>

@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="css/board.css" type="text/css">
 </head>
 <body>
-<form action="BoardDeleteAction.do" method="post">
+<%-- <form action="BoardDeleteAction.do" method="post">
 	<table>
 		<caption>글 삭제</caption>
 		<tr>
@@ -29,6 +29,9 @@
 			</td>
 		</tr>
 	</table>
-</form>
+</form> --%>
+<script type="text/javascript">
+	confirm('')
+</script>
 </body>
 </html>

@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="css/board.css" type="text/css">
 </head>
 <body>
+${logInfo }<a href="Logout.do">로그아웃</a>
 <table width="600">
 	<caption>게시판 리스트</caption>
 	<tr>
@@ -21,9 +22,9 @@
 		<tr>
 			<td>${dto.no}</td>
 			<td><a href="BoardView.do?no=${dto.no}">${dto.title}</a></td>
-			<td>${dto.name}</td>
-			<td>${dto.writeday}</td>
-			<td align="right">${dto.readcount}</td>
+			<td>${dto.memberDto.name}(${dto.memberDto.id })</td>
+			<td>${dto.regdt}</td>
+			<td align="right">${dto.readcnt}</td>
 		</tr>
 	</c:forEach>
 </table><br/>
